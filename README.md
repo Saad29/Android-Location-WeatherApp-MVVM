@@ -16,7 +16,8 @@ Some significant features of Android development which are used in this project 
 This is a modern architectural design pattern which uses many of the modern [architecture components](https://developer.android.com/topic/libraries/architecture) recommended officially for android app development. MVVM follows the seperation of concern principle
 where view or presentation layer (the Activities along with their layouts) only deal with interaction and the presenation of the data, while the data they display are managed by the ViewModel classes which in turn communicate with the Model classes which actually act as the placeholder for the data. 
 In our case, the models are used to hold the data fetched by the FusedLocation API and the OpenWeatherMap API. The ViewModels expose the data via LiveData which the views can consume. The views, which are the LifeCycle owners observe the LiveData objects via 'Observers', and update accordingly.
-Both the Location and the Weather view have their own ViewModels and Models. The directory is structured so that all relevant types of classes are grouped togehter.
+
+Both the Location and the Weather view have their own ViewModels and Models. The WeatherViewModel uses a ViewModelFactory to be initialised. Factory method is a creational design pattern.  The directory is structured so that all relevant types of classes are grouped togehter.
 So the main components used for implementing MVVM are ViewModel, LiveData, LifeCycle, DataBinding and ViewBinding. These are all part of [Android Jetpack libraries](https://developer.android.com/jetpack#foundation-components)
 
 ### Retrofit 2 and Moshi
@@ -42,6 +43,11 @@ For successfully building this project, you will need to do two things.
 1. Obtain an API key upon registration at the [OpenWeatherMap API](http://openweathermap.org) site, as it will be used to obtain the weather details.
 
 2. Setting this API key in the [WeatherViewModel](https://github.com/Saad29/Android-Location-WeatherApp-MVVM/blob/master/app/src/main/java/com/example/weatherapp1/viewModels/WeatherViewModel.kt) file.
+
+### Possible future improvements
+
+1. Using Dependency Injection instead of ViewModelTaskFactory to instantiate the ViewModel.
+2. Using two fragments instead of activities and providing a Navigation graph for navigating between them and using Safe Args to pass data.
 
 
 
