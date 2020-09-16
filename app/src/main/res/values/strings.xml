@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Get My Weather</string>
+    <string name="weather_btn_txt">Whats the weather?</string>
+    <string name="weather_text">TextView</string>
+    <string name="latLong">Longitude: %.3f, Latitude: %.3f</string>
+    <string name="enable_gps">Please enable your gps</string>
+    <string name="permission_request">App requires location permission</string>
+    <string name="initial_value">0.0</string>
+    <string name="label_sunset">Sunset</string>
+    <string name="label_sunrise">Sunrise</string>
+    <string name="degree_celsius_symbol">°C</string>
+    <string name="description_weather_condition_icon">weather condition icon</string>
+    <string name="label_humidity">Humidity</string>
+    <string name="label_location">Current Location Corodinates</string>
+</resources>
